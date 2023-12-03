@@ -9,7 +9,8 @@ let tableData = ref([]);
 let pageIndex = ref(0);
 let pageSize = ref(100);
 let demo = [];
-let loading = ref(false)
+let loading = ref(false);
+
 async function setData() {
   loading.value = true;
   await new Promise((resolve, reject) => {
@@ -43,6 +44,7 @@ function getPageList() {
     loading.value = false;
   }, 500);
 }
+
 // 表格懒加载
 function lazyloading() {
   let dom = document.querySelector(".el-scrollbar__wrap");
