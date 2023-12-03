@@ -7,7 +7,7 @@ onMounted(() => {});
 // 网易云API 调用测试
 function getMusicApi() {
   proxy.$axios
-    .get("/user/account")
+    .get("/search/hot")
     .then((res) => {
       console.log(res.data);
     })
